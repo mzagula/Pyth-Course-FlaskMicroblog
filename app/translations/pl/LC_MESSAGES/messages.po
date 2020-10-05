@@ -1,0 +1,153 @@
+# Polish translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-10-05 22:29+0200\n"
+"PO-Revision-Date: 2020-10-05 21:43+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pl\n"
+"Language-Team: pl <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: app/__init__.py:22
+msgid "Please log in to access this page"
+msgstr "Zaloguj się aby dostać się do aplikacji"
+
+#: app/email.py:20
+msgid "[Microblog] Reset Your Password"
+msgstr "[Mikroblog] Uaktualnij swoje hasło"
+
+#: app/forms.py:10 app/forms.py:17 app/forms.py:37
+msgid "Username"
+msgstr "Użytkownik"
+
+#: app/forms.py:11 app/forms.py:19 app/forms.py:65
+msgid "Password"
+msgstr "Hasło"
+
+#: app/forms.py:12
+msgid "Remember Me"
+msgstr "Zapamiętaj mnie"
+
+#: app/forms.py:13
+msgid "Sign In"
+msgstr "Zaloguj"
+
+#: app/forms.py:18 app/forms.py:61
+msgid "Email"
+msgstr "Email"
+
+#: app/forms.py:21
+msgid "Repeat password"
+msgstr "Powtórz hasło"
+
+#: app/forms.py:23
+msgid "Register"
+msgstr "Zarejestruj się"
+
+#: app/forms.py:28
+msgid "Please use a different username."
+msgstr "Użyj innego użytkownika"
+
+#: app/forms.py:33
+msgid "Please use a different email address."
+msgstr "Użyj innego adresu email"
+
+#: app/forms.py:38
+msgid "About me"
+msgstr "O mnie"
+
+#: app/forms.py:39 app/forms.py:52 app/forms.py:57
+msgid "Submit"
+msgstr "Zatwierdź"
+
+#: app/forms.py:49
+msgid "Please use a different user!"
+msgstr "Użyj innego użytkownika!"
+
+#: app/forms.py:56
+msgid "Say something"
+msgstr "Powiedz coś"
+
+#: app/forms.py:62
+msgid "Request Password Reset"
+msgstr "Zresetuj hasło"
+
+#: app/forms.py:66
+msgid "Repeat Password"
+msgstr "Powtórz hasło"
+
+#: app/forms.py:67
+msgid "Request Password Request"
+msgstr "Zresetuj hasło"
+
+#: app/routes.py:23
+msgid "Your post is now live!"
+msgstr "Twój post jest teraz żywy!"
+
+#: app/routes.py:44
+msgid "Invalid username or password"
+msgstr "Niepoprawny użytkownik lub hasło"
+
+#: app/routes.py:70
+msgid "Congratulation! You are now a registered user."
+msgstr "Gratulację! Jesteś teraz prawomocnym użytkownikiem"
+
+#: app/routes.py:106
+msgid "Your changes have been saved."
+msgstr "Twoje zmiany zostały zapisane"
+
+#: app/routes.py:121
+#, python-format
+msgid "User %(username)s not found"
+msgstr "Użytkownik %(username)s nieznaleziony"
+
+#: app/routes.py:124
+msgid "You cannot follow yourself"
+msgstr "Nie możesz podążać za sobą!"
+
+#: app/routes.py:128
+msgid "You are following {}"
+msgstr "Prześladujesz {}"
+
+#: app/routes.py:141
+#, python-format
+msgid "User %(username)s not found."
+msgstr "Użytkownik %(username)s nieznaleziony"
+
+#: app/routes.py:144
+msgid "You cannot unfollow yourself!"
+msgstr "Nie możesz siebie nieprześladować!"
+
+#: app/routes.py:148
+#, python-format
+msgid "You are not following %(username)s."
+msgstr "Nie prześladujesz %(username)s."
+
+#: app/routes.py:177
+msgid "Check your email for the instructions to reset your password"
+msgstr "Sprawdź swoją skrzynkę pocztową z instrukcjami jak zaktualizować hasło"
+
+#: app/routes.py:193
+msgid "Your password has been reset"
+msgstr "Twoje hasło zostało zaktualizowane"
+
+#: app/templates/404.html:4
+msgid "File not found"
+msgstr "Plik nie znaleziony"
+
+#: app/templates/_post.html:14
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr "%(username)s powiedział %(when)s"
+
