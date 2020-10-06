@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-10-05 22:29+0200\n"
+"POT-Creation-Date: 2020-10-05 23:10+0200\n"
 "PO-Revision-Date: 2020-10-05 21:43+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pl\n"
@@ -39,7 +39,7 @@ msgstr "Hasło"
 msgid "Remember Me"
 msgstr "Zapamiętaj mnie"
 
-#: app/forms.py:13
+#: app/forms.py:13 app/routes.py:52
 msgid "Sign In"
 msgstr "Zaloguj"
 
@@ -51,7 +51,7 @@ msgstr "Email"
 msgid "Repeat password"
 msgstr "Powtórz hasło"
 
-#: app/forms.py:23
+#: app/forms.py:23 app/routes.py:73
 msgid "Register"
 msgstr "Zarejestruj się"
 
@@ -91,54 +91,70 @@ msgstr "Powtórz hasło"
 msgid "Request Password Request"
 msgstr "Zresetuj hasło"
 
-#: app/routes.py:23
+#: app/routes.py:24
 msgid "Your post is now live!"
 msgstr "Twój post jest teraz żywy!"
 
-#: app/routes.py:44
+#: app/routes.py:33
+msgid "Home"
+msgstr "Dom"
+
+#: app/routes.py:45
 msgid "Invalid username or password"
 msgstr "Niepoprawny użytkownik lub hasło"
 
-#: app/routes.py:70
+#: app/routes.py:71
 msgid "Congratulation! You are now a registered user."
 msgstr "Gratulację! Jesteś teraz prawomocnym użytkownikiem"
 
-#: app/routes.py:106
+#: app/routes.py:107
 msgid "Your changes have been saved."
 msgstr "Twoje zmiany zostały zapisane"
 
-#: app/routes.py:121
+#: app/routes.py:112
+msgid "Edit profile"
+msgstr "Zaktualizuj profil"
+
+#: app/routes.py:122
 #, python-format
 msgid "User %(username)s not found"
 msgstr "Użytkownik %(username)s nieznaleziony"
 
-#: app/routes.py:124
+#: app/routes.py:125
 msgid "You cannot follow yourself"
 msgstr "Nie możesz podążać za sobą!"
 
-#: app/routes.py:128
+#: app/routes.py:129
 msgid "You are following {}"
 msgstr "Prześladujesz {}"
 
-#: app/routes.py:141
+#: app/routes.py:142
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Użytkownik %(username)s nieznaleziony"
 
-#: app/routes.py:144
+#: app/routes.py:145
 msgid "You cannot unfollow yourself!"
 msgstr "Nie możesz siebie nieprześladować!"
 
-#: app/routes.py:148
+#: app/routes.py:149
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "Nie prześladujesz %(username)s."
 
-#: app/routes.py:177
+#: app/routes.py:165
+msgid "Explore"
+msgstr "Eksploruj"
+
+#: app/routes.py:178
 msgid "Check your email for the instructions to reset your password"
 msgstr "Sprawdź swoją skrzynkę pocztową z instrukcjami jak zaktualizować hasło"
 
-#: app/routes.py:193
+#: app/routes.py:180
+msgid "Reset Password"
+msgstr "Zaktualizuj hasło"
+
+#: app/routes.py:194
 msgid "Your password has been reset"
 msgstr "Twoje hasło zostało zaktualizowane"
 
