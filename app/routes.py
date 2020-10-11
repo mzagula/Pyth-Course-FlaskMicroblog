@@ -10,7 +10,7 @@ from app.forms import ResetPasswordRequestForm
 from app.email import send_password_reset_email
 from flask_babel import _, get_locale
 from flask_babel import lazy_gettext as _l
-from guess_language import guess_language
+from textblob import TextBlob
 from flask import jsonify
 from app.translate import translate
 
@@ -21,7 +21,8 @@ from app.translate import translate
 def index():
     form = PostForm()
     if form.validate_on_submit():
-        language =guess_language(form.post.data)
+        language_text = TextBlob(form.post.data)
+        language =language_text.detect_language()
         if language =='UNKNOWN' or len(language)>5:
             language = ''
         post = Post(body=form.post.data, author=current_user, language=language)
