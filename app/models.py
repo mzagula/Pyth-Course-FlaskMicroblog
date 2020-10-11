@@ -68,6 +68,10 @@ class User(UserMixin, db.Model):
             return
         return User.query.get(id)
 
+@login.user_loader
+def user_loader(id):
+    return User.query.get(int(id))
+
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -80,6 +84,4 @@ class Post(db.Model):
         return '<Post {}>'.format(self.body)
 
 
-@login.user_loader
-def user_loader(id):
-    return User.query.get(int(id))
+
