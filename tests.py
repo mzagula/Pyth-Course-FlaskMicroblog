@@ -1,12 +1,13 @@
 from datetime import datetime, timedelta
 import unittest
-from app import app, db
+from app import db
+from flask import current_app
 from app.models import User, Post
 
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
-       current_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
+        current_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
         db.create_all()
 
     def tearDown(self):

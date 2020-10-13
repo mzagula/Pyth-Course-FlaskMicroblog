@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, current_app
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -10,7 +10,6 @@ import os
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
-from flask import request
 
 
 db = SQLAlchemy()
