@@ -25,7 +25,7 @@ babel=Babel()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
-    app.config.from_object(Config)
+    current_app.config.from_object(Config)
 
     db.init_app(app)
     migrate.init_app(app)
@@ -46,17 +46,17 @@ def create_app(config_class=Config):
 
 
     if not app.debug and not app.testing:
-        if app.config['MAIL_SERVER']:
+        if current_app.config['MAIL_SERVER']:
             auth = None
-            if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
-                auth = (app.config['MAIL_USERNAME'],app.config['MAIL_PASSWORD'])
+            if current_app.config['MAIL_USERNAME'] or current_app.config['MAIL_PASSWORD']:
+                auth = (current_app.config['MAIL_USERNAME'],current_app.config['MAIL_PASSWORD'])
             secure = None
-            if app.config['MAIL_USE_TLS']:
+            if current_app.config['MAIL_USE_TLS']:
                 secure=()
             mail_handler = SMTPHandler(
-                mailhost=(app.config['MAIL_SERVER'],app.config['MAIL_PORT']),
-                fromaddr='no-reply@' + app.config['MAIL_SERVER'],
-                toaddrs=app.config['ADMINS'],
+                mailhost=(current_app.config['MAIL_SERVER'],current_app.config['MAIL_PORT']),
+                fromaddr='no-reply@' + current_app.config['MAIL_SERVER'],
+                toaddrs=current_app.config['ADMINS'],
                 subject='Microblog failure',
                 credentials=auth,
                 secure=secure
@@ -80,7 +80,7 @@ def create_app(config_class=Config):
 
 @babel.localeselector
 def get_locale():
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
 
 
 
