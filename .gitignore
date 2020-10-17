@@ -8,3 +8,4 @@ message.pot
 *.log
 app.db
 *.pyc
+.env
