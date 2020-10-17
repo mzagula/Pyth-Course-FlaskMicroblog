@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta
 import unittest
 from app import db, create_app
-from flask import current_app
 from app.models import User, Post
 from config import Config
 
@@ -9,6 +8,7 @@ from config import Config
 class TestConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = 'sqlite://'
+
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
@@ -89,7 +89,5 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(f3, [p3, p4])
         self.assertEqual(f4, [p4])
 
-    if __name__=='__main__':
+    if __name__ == '__main__':
         unittest.main(verbosity=2)
-
-

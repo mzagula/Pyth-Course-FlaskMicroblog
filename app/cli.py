@@ -1,4 +1,3 @@
-from app import app
 import os
 import click
 
@@ -8,7 +7,6 @@ def register(app):
     def translate():
         """Translation and localization commands."""
         pass
-
 
     @translate.command()
     @click.argument('lang')
@@ -34,4 +32,3 @@ def register(app):
         """Compile all languages"""
         if os.system('pybabel compile -d app/translations'):
             raise RuntimeError('compile command failed')
-
