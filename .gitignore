@@ -4,8 +4,10 @@ migrations/__pycache__
 migrations/versions/__pycache__
 app/__pycache__
 message.pot
+.vagrant
 
 *.log
 app.db
 *.pyc
 .env
+
