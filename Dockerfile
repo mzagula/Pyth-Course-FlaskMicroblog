@@ -4,10 +4,13 @@ RUN adduser -D microblog
 
 WORKDIR /home/microblog
 
-copy requirements.txt requirements.txt
+COPY requirements.txt requirements.txt
 RUN python -m venv venv
+RUN apk update && apk add python3-dev gcc libc-dev
 RUN venv/bin/pip install -r requirements.txt
-RUN venv/bin/pip install gunicorn
+RUN apk add libffi-dev openssl-dev
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
+RUN venv/bin/pip install gunicorn pymysql cryptography
 
 COPY app app
 COPY migrations migrations
