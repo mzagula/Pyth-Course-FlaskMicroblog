@@ -75,6 +75,16 @@
                     $(destElem).text("{{ _('Error: could not contact server') }}")
                 });
             }
+        $(function() {
+            $('.user_popup').hover(
+                function(event) {
+                    var elem= $(event.currentTarget);
+                },
+                function(event) {
+                    var elem = $(event.currentTarget);
+                }
+            )
+        }
     </script>
 
 {% endblock %}
