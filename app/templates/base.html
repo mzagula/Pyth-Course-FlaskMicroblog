@@ -79,12 +79,19 @@
             $('.user_popup').hover(
                 function(event) {
                     var elem= $(event.currentTarget);
+                    timer = setTimeout(function() {
+                            timer = null;
+                            },1000);
                 },
                 function(event) {
                     var elem = $(event.currentTarget);
+                    if (timer){
+                        clearTimeout(timer);
+                        timer=null;
+                    }
                 }
             )
-        }
+        });
     </script>
 
 {% endblock %}
