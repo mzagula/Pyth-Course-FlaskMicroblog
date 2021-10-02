@@ -86,13 +86,13 @@
                             xhr = $.ajax(
                                     '/user/' + elem.first().text().trim() + '/popup').done(
                                         function(data) {
-                                            xhr = null
+                                            xhr = null;
                                             elem.popover({
                                                 trigger: 'manual',
                                                 html: true,
                                                 animation: false,
                                                 container: elem,
-                                                content: data,
+                                                content: data
                                             }).popover('show');
                                             flask_moment_render_all();
                                         }
